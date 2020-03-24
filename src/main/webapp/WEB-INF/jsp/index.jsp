@@ -187,13 +187,13 @@ Message: ${message}
     </ol>
     <div class="carousel-inner">
         <div class="item active">
-            <img src="img/82839-106.jpg" alt="第一张">
+            <img src="images/82839-106.jpg" alt="第一张">
         </div>
         <div class="item">
-            <img src="img/105905-106.jpg" alt="第二张">
+            <img src="images/105905-106.jpg" alt="第二张">
         </div>
         <div class="item">
-            <img src="img/296494-106.jpg" alt="第三张">
+            <img src="images/296494-106.jpg" alt="第三张">
         </div>
 
     </div>
