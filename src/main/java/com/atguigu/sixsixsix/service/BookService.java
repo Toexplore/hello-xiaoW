@@ -1,7 +1,6 @@
 package com.atguigu.sixsixsix.service;
 
-import com.atguigu.sixsixsix.dao.domain.BookDO;
-import org.springframework.stereotype.Service;
+import com.atguigu.sixsixsix.dao.domain.Book;
 
 import java.util.List;
 
@@ -16,5 +15,5 @@ public interface BookService {
      * 查询所有的books
      * @return
      */
-    List<BookDO> selectAllBooks();
+    List<Book> selectAllBooks();
 }

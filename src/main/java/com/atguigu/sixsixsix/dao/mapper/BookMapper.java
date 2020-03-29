@@ -1,6 +1,6 @@
 package com.atguigu.sixsixsix.dao.mapper;
 
-import com.atguigu.sixsixsix.dao.domain.BookDO;
+import com.atguigu.sixsixsix.dao.domain.Book;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -14,5 +14,5 @@ import java.util.List;
 @Mapper
 public interface BookMapper {
     @Select("select * from book")
-    List<BookDO> selectAllBooks();
+    List<Book> selectAllBooks();
 }

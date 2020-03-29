@@ -25,11 +25,20 @@
     <tr>
         <td>书名</td>
         <td>作者</td>
+        <td>出版社</td>
+        <td>isbn</td>
+        <td>zhd</td>
+        <td>状态</td>
     </tr>
     <c:forEach items="${books}" var="item">
         <tr>
             <td>${item.name }</td>
             <td>${item.author }</td>
+            <td>${item.publish }</td>
+            <td>${item.isbn }</td>
+            <td>${item.price }</td>
+            <td>${item.state }</td>
+
 <%--            <td><a href="DeleteServlet?id=${item.id }">删除</a>|<a href="UpdateServlet?id=${item.id }">修改</a></td>--%>
         </tr>
     </c:forEach>

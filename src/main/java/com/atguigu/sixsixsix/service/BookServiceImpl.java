@@ -1,6 +1,6 @@
 package com.atguigu.sixsixsix.service;
 
-import com.atguigu.sixsixsix.dao.domain.BookDO;
+import com.atguigu.sixsixsix.dao.domain.Book;
 import com.atguigu.sixsixsix.dao.mapper.BookMapper;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ public class BookServiceImpl implements BookService {
     BookMapper bookMapper;
 
     @Override
-    public List<BookDO> selectAllBooks() {
+    public List<Book> selectAllBooks() {
         return bookMapper.selectAllBooks();
     }
 }

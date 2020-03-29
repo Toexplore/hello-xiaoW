@@ -1,4 +1,3 @@
-<%@ page import="com.book.domain.Book" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -18,34 +17,34 @@
 <nav class="navbar navbar-default" role="navigation" style="background-color:#fff">
     <div class="container-fluid">
         <div class="navbar-header" style="margin-left: 8%;margin-right: 1%">
-            <a class="navbar-brand " href="reader_main.html"><p class="text-primary">我的图书馆</p></a>
+            <a class="navbar-brand " href="reader_main"><p class="text-primary">我的图书馆</p></a>
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
                 <li class="active">
-                    <a href="reader_querybook.html" >
+                    <a href="reader_book_query" >
                         图书查询
                     </a>
                 </li>
                 <li>
-                    <a href="reader_info.html" >
+                    <a href="reader_info" >
                         个人信息
                     </a>
                 </li>
                 <li >
-                    <a href="mylend.html" >
+                    <a href="reader_book_detail" >
                         我的借还
                     </a>
                 </li>
                 <li >
-                    <a href="reader_repasswd.html" >
+                    <a href="reader_repasswd" >
                         密码修改
                     </a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="reader_info.html"><span class="glyphicon glyphicon-user"></span>&nbsp;${readercard.name}，已登录</a></li>
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li>
+                <li><a href="reader_info"><span class="glyphicon glyphicon-user"></span>&nbsp;${readercard.name}，已登录</a></li>
+                <li><a href="index"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li>
             </ul>
         </div>
     </div>
@@ -53,7 +52,7 @@
 
 
 <div style="padding: 30px 550px 10px">
-    <form   method="post" action="reader_querybook_do.html" class="form-inline"  id="searchform">
+    <form   method="post" action="reader_query_book_do" class="form-inline"  id="searchform">
         <div class="input-group">
             <input type="text" placeholder="输入图书号或图书名" class="form-control" id="search" name="searchWord" class="form-control">
             <span class="input-group-btn">
@@ -94,7 +93,7 @@
         </div>
     </c:if>
 </div>
-<c:if test="${!empty books}">
+<%--<c:if test="${!empty books}">--%>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
@@ -115,27 +114,27 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${books}" var="book">
+                <c:forEach items="${books}" var="item">
                     <tr>
-                        <td><c:out value="${book.name}"></c:out></td>
-                        <td><c:out value="${book.author}"></c:out></td>
-                        <td><c:out value="${book.publish}"></c:out></td>
-                        <td><c:out value="${book.isbn}"></c:out></td>
-                        <td><c:out value="${book.price}"></c:out></td>
-                        <c:if test="${book.state==1}">
+                        <td>${item.name }</td>
+                        <td>${item.author }</td>
+                        <td>${item.publish }</td>
+                        <td>${item.isbn }</td>
+                        <td>${item.price }</td>
+                        <c:if test="${book.state=='1'}">
                             <td>在馆</td>
                         </c:if>
-                        <c:if test="${book.state==0}">
+                        <c:if test="${book.state=='0'}">
                             <td>借出</td>
                         </c:if>
-                        <td><a href="readerbookdetail.html?bookId=<c:out value="${book.bookId}"></c:out>"><button type="button" class="btn btn-success btn-xs">详情</button></a></td>
+<%--                        <td><a href="readerbookdetail.html?bookId=<c:out value="${book.bookId}"></c:out>"><button type="button" class="btn btn-success btn-xs">详情</button></a></td>--%>
                     </tr>
                 </c:forEach>
                 </tbody>
             </table>
         </div>
     </div>
-</c:if>
+<%--</c:if>--%>
 
 
 </body>

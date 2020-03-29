@@ -54,7 +54,7 @@ Message: ${message}
 <c:if test="${!empty error}">
     <script>
         alert("${error}");
-        window.location.href="login.html";
+        window.location.href="index";
     </script>
 </c:if>
 <h2 style="text-align: center;font-family: 'Adobe 楷体 Std R';color: palevioletred">图 书 馆</h2>
@@ -278,13 +278,10 @@ Message: ${message}
         else if( passwd ==''){
             $("#info").text("提示:密码不能为空");
         }
-        else if(isNaN( id )){
-            $("#info").text("提示:账号必须为数字");
-        }
         else {
             $.ajax({
                 type: "POST",
-                url: "/api/loginCheck",
+                url: "loginCheck",
                 data: {
                     id:id ,
                     passwd: passwd
@@ -295,7 +292,7 @@ Message: ${message}
                         $("#info").text("提示:账号或密码错误！");
                     } else if(data.stateCode.trim() == "1") {
                         $("#info").text("提示:登陆成功，跳转中...");
-                        window.location.href="/admin_main.html";
+                        window.location.href="/admin_main";
                     } else if(data.stateCode.trim() == "2"){
                         if(remember){
                             rememberLogin(id,passwd,remember);
@@ -303,9 +300,7 @@ Message: ${message}
                             Cookies.remove('loginStatus');
                         }
                         $("#info").text("提示:登陆成功，跳转中...");
-                        window.location.href="/reader_main.html";
-
-
+                        window.location.href="/reader_main";
                     }
                 }
             });

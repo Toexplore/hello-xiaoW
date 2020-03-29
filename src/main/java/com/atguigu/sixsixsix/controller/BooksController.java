@@ -1,6 +1,6 @@
 package com.atguigu.sixsixsix.controller;
 
-import com.atguigu.sixsixsix.dao.domain.BookDO;
+import com.atguigu.sixsixsix.dao.domain.Book;
 import com.atguigu.sixsixsix.service.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +16,13 @@ import java.util.Map;
  * @date 2020/3/22 11:27 下午
  **/
 @Controller
-public class BookController {
+public class BooksController {
     @Resource
     BookService bookService;
 
     @RequestMapping("/books")
     public String index(Map<String, Object> model){
-        List<BookDO>  books = bookService.selectAllBooks();
+        List<Book>  books = bookService.selectAllBooks();
         model.put("books", books);
         return "books";
     }
