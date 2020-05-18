@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.atguigu.sixsixsix.dao.mapper")
+//@MapperScan("com.atguigu.sixsixsix.old.dao.mapper")
 public class SixsixsixApplication {
 
 	public static void main(String[] args) {

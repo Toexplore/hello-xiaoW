@@ -1,0 +1,80 @@
+.input{
+    width: 100%;
+    min-height: 350px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+}
+
+.input-group{
+    margin-top: 8px;
+}
+
+
+/* 搜索页 */
+
+.undersearch-block{
+    margin-top: 20px;
+}
+
+.link-list{
+    width: 100% ;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.link-list-head{
+    margin-left: 10px;
+    margin-right:10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding-top:10px;
+}
+
+.link-list-head-a{
+    font-size: 18px;
+    color: rgba(51, 122, 183, 1);
+}
+
+.link-list-item{
+    margin-left: 10px;
+    margin-right:10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding-top:10px;
+}
+
+.link-list-item-a{
+    color: black;
+}
+
+/* 个人设置页面 */
+
+.setting-block{
+    padding:20px;
+}
+
+.setting-list{
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.setting-list-head{
+    margin-left: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    padding-top:15px;
+    font-size: 18px;
+    color: rgba(51, 122, 183, 1);
+}
+
+.setting-list-item{
+    margin-left: 10px;
+    margin-right:10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    padding-top:15px;
+}
